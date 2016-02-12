@@ -12,6 +12,11 @@
   "author": "Jake Bladt",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.13.4"
+    "body-parser": "^1.15.0",
+    "ejs": "^2.4.1",
+    "express": "^4.13.4",
+    "memory-cache": "^0.1.4",
+    "passport": "^0.3.2",
+    "tedious": "^1.13.2"
   }
 }
