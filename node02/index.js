@@ -8,6 +8,10 @@ var server = express();
 server.set('views', path.join(__dirname, 'views'));
 server.set('images', path.join(__dirname, 'images'));
 
+server.get('/secret', function(req, res) {
+	res.status(404).send('There are no secrets here.');
+});
+
 server.get('/', function(req, res) {
 	res.send('You found the front page, skipper!');
 });
