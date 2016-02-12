@@ -6,4 +6,9 @@
     <h1>=^..^=</h1>
   </body>
   <p>A kitty face for <%= userName %></p>
+  <ul>
+  <% for(var i = 0; i < stepsData.length; i++) { %>
+    <li><%= stepsData[i].date + ': ' + stepData[i].steps_count %></li>
+  <% } %>
+  </ul>
 </html>

@@ -14,7 +14,14 @@ server.get('/secret', function(req, res) {
 });
 
 server.get('/', function(req, res) {
-	res.render('home', {userName: 'Jake'});
+	res.render('home', {
+		userName: 'Jake',
+		stepsData: [
+			{date: '1-January-2016', steps_count: '10000'}, 
+			{date: '2-January-2016', steps_count: '10550'}, 
+			{date: '3-January-2016', steps_count: '12222'}, 
+		]
+	});
 });
 
 server.listen(8888, function() {
