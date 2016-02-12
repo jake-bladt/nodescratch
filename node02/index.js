@@ -5,6 +5,8 @@ var router = express.Router();
 
 var server = express();
 
+server.set('view engine', 'ejs');
+
 server.set('views', path.join(__dirname, 'views'));
 server.set('images', path.join(__dirname, 'images'));
 
@@ -14,6 +16,10 @@ server.get('/secret', function(req, res) {
 
 server.get('/', function(req, res) {
 	res.send('You found the front page, skipper!');
+});
+
+router.get('/', function(req, res) {
+  res.status(404);
 });
 
 server.listen(8888, function() {
