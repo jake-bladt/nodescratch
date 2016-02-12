@@ -10,16 +10,14 @@ server.set('view engine', 'ejs');
 server.set('views', path.join(__dirname, 'views'));
 server.set('images', path.join(__dirname, 'images'));
 
+server.use(require('./home'));
+
 server.get('/secret', function(req, res) {
 	res.status(404).send('There are no secrets here.');
 });
 
 server.get('/', function(req, res) {
-	res.send('You found the front page, skipper!');
-});
-
-router.get('/', function(req, res) {
-  res.status(404);
+	res.render('home');
 });
 
 server.listen(8888, function() {
