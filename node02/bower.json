@@ -1,0 +1,24 @@
+{
+  "name": "node02",
+  "description": "A practice node project",
+  "main": "index.js",
+  "authors": [
+    "Jake Bladt"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "sample"
+  ],
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6"
+  }
+}
