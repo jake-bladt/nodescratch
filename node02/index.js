@@ -14,7 +14,7 @@ server.get('/secret', function(req, res) {
 });
 
 server.get('/', function(req, res) {
-	res.render('home');
+	res.render('home', {userName: 'Jake'});
 });
 
 server.listen(8888, function() {
