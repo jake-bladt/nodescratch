@@ -13,7 +13,8 @@ server.use('/images', express.static(__dirname + '/images'));
 server.use('/bower_components', express.static(__dirname + '/bower_components'));
 
 server.post('/username', function(req, res) {
-  
+  var correctName = req.body.realUserName;
+  res.send('Sorry about that, ' + correctName);
 });
 
 server.get('/check/:name', function(req, res) {
