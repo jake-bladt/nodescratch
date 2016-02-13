@@ -1,16 +1,20 @@
 <html>
   <head>
     <title>Kittyface!</title>
+    <link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
     <h1>=^..^=</h1>
   </body>
   <p>A kitty face for <%= userName %></p>
-  <ul>
+  <table class='table'>
   <% for(var i = 0; i < stepsData.length; i++) { %>
-    <li><%= stepsData[i].date + ': ' + stepsData[i].steps_count %></li>
+    <tr>
+      <td><%= stepsData[i].date %></td>
+      <td><%= stepsData[i].steps_count %></td>
+    </tr>
   <% } %>
-  </ul>
+  </table>
   <p>Here's a picture of a cat.</p>
   <img src='images/cat.jpg' alt='a cat'/>
 </html>
