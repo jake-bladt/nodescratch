@@ -1,17 +1,19 @@
 var express = require('express');
 var path = require('path');
+var bodyParser = require('body-parser');
 
 var router = express.Router();
 var server = express();
 
+server.use(bodyParser.urlencoded({ extended: true }));
 server.set('view engine', 'ejs');
 
 server.set('views', path.join(__dirname, 'views'));
 server.use('/images', express.static(__dirname + '/images'));
 server.use('/bower_components', express.static(__dirname + '/bower_components'));
 
-server.get('/secret', function(req, res) {
-	res.status(404).send('There are no secrets here.');
+server.post('/username', function(req, res) {
+  
 });
 
 server.get('/check/:name', function(req, res) {
