@@ -14,6 +14,12 @@ server.get('/secret', function(req, res) {
 	res.status(404).send('There are no secrets here.');
 });
 
+server.get('/check/:name', function(req, res) {
+	res.render('check', {
+		userName: req['name']
+	});
+});
+
 server.get('/', function(req, res) {
 	res.render('home', {
 		userName: 'Jake',

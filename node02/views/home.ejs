@@ -4,17 +4,17 @@
     <link href="/bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <h1>=^..^=</h1>
+	  <h1>=^..^=</h1>
+	  <p>A kitty face for <%= userName %></p>
+	  <table class='table'>
+	  <% for(var i = 0; i < stepsData.length; i++) { %>
+	    <tr>
+	      <td><%= stepsData[i].date %></td>
+	      <td><%= stepsData[i].steps_count %></td>
+	    </tr>
+	  <% } %>
+	  </table>
+	  <p>Here's a picture of a cat.</p>
+	  <img src='images/cat.jpg' alt='a cat' class='img-rounded'/>
   </body>
-  <p>A kitty face for <%= userName %></p>
-  <table class='table'>
-  <% for(var i = 0; i < stepsData.length; i++) { %>
-    <tr>
-      <td><%= stepsData[i].date %></td>
-      <td><%= stepsData[i].steps_count %></td>
-    </tr>
-  <% } %>
-  </table>
-  <p>Here's a picture of a cat.</p>
-  <img src='images/cat.jpg' alt='a cat' class='img-rounded'/>
 </html>
