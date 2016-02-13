@@ -16,7 +16,7 @@ server.get('/secret', function(req, res) {
 
 server.get('/check/:name', function(req, res) {
 	res.render('check', {
-		userName: req.param('name')
+		userName: req.params['name']
 	});
 });
 
