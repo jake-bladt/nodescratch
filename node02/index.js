@@ -7,7 +7,7 @@ var server = express();
 server.set('view engine', 'ejs');
 
 server.set('views', path.join(__dirname, 'views'));
-server.set('images', path.join(__dirname, 'images'));
+express.use('/images', express.static(__dirname + '/images'));
 
 server.get('/secret', function(req, res) {
 	res.status(404).send('There are no secrets here.');
